@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(InteractiveImageProcessingToolkit)
+
+add_subdirectory(AlgorithmImplementation)
+add_subdirectory(InteractiveImageProcessingToolkit_GUI)
