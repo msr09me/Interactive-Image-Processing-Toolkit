@@ -14,175 +14,1029 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>1477</width>
-      <height>528</height>
+      <x>0</x>
+      <y>0</y>
+      <width>1378</width>
+      <height>1334</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
-      <widget class="QFrame" name="frame_2">
+      <widget class="QStackedWidget" name="stackedWidget">
        <property name="minimumSize">
         <size>
-         <width>100</width>
-         <height>0</height>
+         <width>300</width>
+         <height>800</height>
         </size>
        </property>
        <property name="frameShape">
-        <enum>QFrame::Shape::StyledPanel</enum>
+        <enum>QFrame::Shape::WinPanel</enum>
        </property>
        <property name="frameShadow">
-        <enum>QFrame::Shadow::Sunken</enum>
+        <enum>QFrame::Shadow::Raised</enum>
        </property>
-       <widget class="Line" name="line">
-        <property name="geometry">
-         <rect>
-          <x>1</x>
-          <y>108</y>
-          <width>189</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Orientation::Horizontal</enum>
-        </property>
+       <property name="currentIndex">
+        <number>3</number>
+       </property>
+       <widget class="QWidget" name="page_imageInformations">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>221</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Image Information</string>
+         </property>
+         <widget class="QLabel" name="labelImageInfo">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>161</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>labelImageInfo</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
        </widget>
-       <widget class="Line" name="line_2">
-        <property name="geometry">
-         <rect>
-          <x>1</x>
-          <y>249</y>
-          <width>189</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Orientation::Horizontal</enum>
-        </property>
-       </widget>
-       <widget class="QWidget" name="">
-        <property name="geometry">
-         <rect>
-          <x>1</x>
-          <y>282</y>
-          <width>189</width>
-          <height>108</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_4">
-         <item>
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string>Gamma Transformation</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <widget class="QWidget" name="page_intensityTransformations">
+        <widget class="QWidget" name="widget_intensityTransformation" native="true">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>221</width>
+           <height>526</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <widget class="Line" name="line">
+          <property name="geometry">
+           <rect>
+            <x>1</x>
+            <y>108</y>
+            <width>189</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="Line" name="line_2">
+          <property name="geometry">
+           <rect>
+            <x>1</x>
+            <y>249</y>
+            <width>189</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>1</x>
+            <y>282</y>
+            <width>189</width>
+            <height>108</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
-            <widget class="QLabel" name="label_5">
+            <widget class="QLabel" name="label_3">
              <property name="text">
-              <string>Scaling Factor:</string>
+              <string>Gamma Transformation</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineGammaScalingFactor"/>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>Scaling Factor:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineGammaScalingFactor"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>Gamma:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineGamma"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pbApplyGamma">
+             <property name="text">
+              <string>Apply</string>
+             </property>
+            </widget>
            </item>
           </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_4">
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>1</x>
+            <y>141</y>
+            <width>189</width>
+            <height>78</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
            <item>
-            <widget class="QLabel" name="label_6">
+            <widget class="QLabel" name="label_2">
              <property name="text">
-              <string>Gamma:</string>
+              <string>Log Transformation</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineGamma"/>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>Scaling Factor:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineLogScalingFactor"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pbApplyLog">
+             <property name="text">
+              <string>Apply</string>
+             </property>
+            </widget>
            </item>
           </layout>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pbApplyGamma">
-           <property name="text">
-            <string>Apply</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="">
-        <property name="geometry">
-         <rect>
-          <x>1</x>
-          <y>141</y>
-          <width>189</width>
-          <height>78</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_5">
-         <item>
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>Log Transformation</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>1</x>
+            <y>11</y>
+            <width>132</width>
+            <height>48</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
            <item>
-            <widget class="QLabel" name="label_4">
+            <widget class="QLabel" name="label">
              <property name="text">
-              <string>Scaling Factor:</string>
+              <string>Negative Transformation</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineLogScalingFactor"/>
+            <widget class="QPushButton" name="pbApplyNegative">
+             <property name="text">
+              <string>Apply</string>
+             </property>
+            </widget>
            </item>
           </layout>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pbApplyLog">
-           <property name="text">
-            <string>Apply</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+         </widget>
+        </widget>
        </widget>
-       <widget class="QWidget" name="">
-        <property name="geometry">
-         <rect>
-          <x>1</x>
-          <y>11</y>
-          <width>132</width>
-          <height>48</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_6">
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>Negative Transformation</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pbApplyNegative">
-           <property name="text">
-            <string>Apply</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+       <widget class="QWidget" name="page_spatialTransformations">
+        <widget class="QGroupBox" name="groupBoxFilterOptions">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>261</width>
+           <height>211</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Low and High Pass Filters</string>
+         </property>
+         <widget class="QWidget" name="formLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>241</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="kernelTypeLabel">
+             <property name="text">
+              <string>Kernel Type</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="kernelTypeComboBox">
+             <item>
+              <property name="text">
+               <string>Box</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Gaussian</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Median</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Basic Laplacian</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Full Laplacian</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Basic Inverted Laplacian</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Full Inverted Laplacian</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sobel</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="kernelSizeLabel">
+             <property name="text">
+              <string>Kernel Size</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="kernelSizeSpinBox">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="singleStep">
+              <number>2</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="sigmaLabel">
+             <property name="text">
+              <string>Sigma</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QDoubleSpinBox" name="sigmaDoubleSpinBox">
+             <property name="maximum">
+              <double>10.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.010000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="paddingTypeLabel">
+             <property name="text">
+              <string>Padding Type</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QComboBox" name="paddingTypeComboBox">
+             <item>
+              <property name="text">
+               <string>None</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Zero</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Replicate</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Mirror</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="pushButtonLhFilter">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>170</y>
+            <width>75</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Apply</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_sharpening">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>240</y>
+           <width>261</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Sharpening</string>
+         </property>
+         <widget class="QWidget" name="formLayoutWidget_2">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>241</width>
+            <height>101</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="sharpeningMethodLabel">
+             <property name="text">
+              <string>Method</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="sharpeningMethodComboBox">
+             <item>
+              <property name="text">
+               <string>Basic Laplacian</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Full Laplacian</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Basic Inverted Laplacian</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Full Inverted Laplacian</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sobel</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="kernelSizeLabel_2">
+             <property name="text">
+              <string>Kernel Size</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="kernelSizeSpinBox_2">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="singleStep">
+              <number>2</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="paddingTypeLabel_2">
+             <property name="text">
+              <string>Padding Type</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="paddingTypeComboBox_2">
+             <item>
+              <property name="text">
+               <string>None</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Zero</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Replicate</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Mirror</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="pushButtonImageSharpening">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>140</y>
+            <width>75</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Apply</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>450</y>
+           <width>261</width>
+           <height>311</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Unsharp Masking &amp; Highboost Filtering</string>
+         </property>
+         <widget class="QWidget" name="formLayoutWidget_3">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>241</width>
+            <height>161</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout_3">
+           <item row="1" column="0">
+            <widget class="QLabel" name="kernelSizeLabel_3">
+             <property name="text">
+              <string>Kernel Size</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="kernelSizeSpinBox_3">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="singleStep">
+              <number>2</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="sigmaLabel_2">
+             <property name="text">
+              <string>Sigma</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QDoubleSpinBox" name="sigmaDoubleSpinBox_2">
+             <property name="maximum">
+              <double>10.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.010000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="paddingTypeLabel_3">
+             <property name="text">
+              <string>Padding Type</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QComboBox" name="paddingTypeComboBox_3">
+             <item>
+              <property name="text">
+               <string>None</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Zero</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Replicate</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Mirror</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="blurKernelLabel">
+             <property name="text">
+              <string>Blur Kernel</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="blurKernelComboBox">
+             <item>
+              <property name="text">
+               <string>Box</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Median</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Gaussian</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="gainLabel">
+             <property name="text">
+              <string>Gain</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QDoubleSpinBox" name="gainDoubleSpinBox">
+             <property name="maximum">
+              <double>10.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.010000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="pushButtonUMHB">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>210</y>
+            <width>75</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Apply</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="pageMorphologicalBasic">
+        <widget class="QWidget" name="">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>281</width>
+           <height>671</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QGroupBox" name="groupBoxOperation">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>175</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Operation</string>
+            </property>
+            <widget class="QWidget" name="">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>30</y>
+               <width>132</width>
+               <height>126</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <widget class="QRadioButton" name="radioButtonErosion">
+                <property name="text">
+                 <string>Erosion</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButtonDilation">
+                <property name="text">
+                 <string>Dilation</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButtonOpening">
+                <property name="text">
+                 <string>Opening</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButtonClosing">
+                <property name="text">
+                 <string>Closing</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButtonBoundaryExtraction">
+                <property name="text">
+                 <string>Boundary Extraction</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>275</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Structuring Element</string>
+            </property>
+            <widget class="QGroupBox" name="groupBox_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>30</y>
+               <width>251</width>
+               <height>151</height>
+              </rect>
+             </property>
+             <property name="title">
+              <string>Shape</string>
+             </property>
+             <widget class="QWidget" name="">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>20</y>
+                <width>105</width>
+                <height>126</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <widget class="QRadioButton" name="radioButtonSquare">
+                 <property name="text">
+                  <string>Square</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButtonCross">
+                 <property name="text">
+                  <string>Cross</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButtonCircle">
+                 <property name="text">
+                  <string>Circle</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButtonHorizontalLine">
+                 <property name="text">
+                  <string>Horizontal Line</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButtonVerticalLine">
+                 <property name="text">
+                  <string>Vertical Line</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+            <widget class="QGroupBox" name="groupBox_6">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>190</y>
+               <width>251</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="title">
+              <string>Size</string>
+             </property>
+             <widget class="QWidget" name="">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>211</width>
+                <height>34</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <widget class="QSlider" name="horizontalSliderSeSize">
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="singleStep">
+                  <number>2</number>
+                 </property>
+                 <property name="sliderPosition">
+                  <number>3</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="tickPosition">
+                  <enum>QSlider::TickPosition::TicksBothSides</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="spinBoxSeSize">
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="singleStep">
+                  <number>2</number>
+                 </property>
+                 <property name="value">
+                  <number>3</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_7">
+            <property name="title">
+             <string>Padding</string>
+            </property>
+            <widget class="QWidget" name="layoutWidget_2">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>30</y>
+               <width>132</width>
+               <height>111</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <widget class="QRadioButton" name="radioButtonNone">
+                <property name="text">
+                 <string>None</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButtonZero">
+                <property name="text">
+                 <string>Zero</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButtonReplicate">
+                <property name="text">
+                 <string>Replicate</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButtonMirror">
+                <property name="text">
+                 <string>Mirror</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonApplyBasicMorphology">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="text">
+             <string>Apply</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="pageGrayscaleToBinary">
+        <widget class="QWidget" name="formLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>271</width>
+           <height>151</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_4">
+          <property name="horizontalSpacing">
+           <number>12</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>15</number>
+          </property>
+          <property name="leftMargin">
+           <number>7</number>
+          </property>
+          <property name="rightMargin">
+           <number>7</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="methodLabel">
+            <property name="text">
+             <string>Method</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="methodGrayscaleToBinaryComboBox">
+            <item>
+             <property name="text">
+              <string>Fixed</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Otsu</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Adaptive Mean</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Adaptive Gaussian</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="thresholdValueLabel">
+            <property name="text">
+             <string>Threshold Value</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QSpinBox" name="thresholdValueSpinBox">
+            <property name="maximum">
+             <number>255</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="blockSizeLabel">
+            <property name="text">
+             <string>Block Size</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QSpinBox" name="blockSizeSpinBox">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="singleStep">
+             <number>2</number>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="cLabel">
+            <property name="text">
+             <string>C</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QSpinBox" name="cSpinBox"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButtonApplyGrayscaleToBinary">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>200</y>
+           <width>75</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Apply</string>
+         </property>
+        </widget>
        </widget>
       </widget>
      </item>
@@ -310,11 +1164,34 @@
      <string>Transformations</string>
     </property>
     <addaction name="actionIntensity_Transformation"/>
+    <addaction name="actionSpatial_Transformations"/>
+   </widget>
+   <widget class="QMenu" name="menuConversion">
+    <property name="title">
+     <string>Conversion</string>
+    </property>
+    <addaction name="actionRGB_to_Grayscale"/>
+    <addaction name="actionGrayscale_to_Binary"/>
+   </widget>
+   <widget class="QMenu" name="menuMorphology">
+    <property name="title">
+     <string>Morphology</string>
+    </property>
+    <addaction name="actionBasic_Morphological"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuIntensity_Transformation"/>
+   <addaction name="menuConversion"/>
+   <addaction name="menuMorphology"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>10</height>
+    </size>
+   </property>
+  </widget>
   <action name="actionLoad_Image">
    <property name="text">
     <string>Load Image</string>
@@ -328,6 +1205,26 @@
   <action name="actionIntensity_Transformation">
    <property name="text">
     <string>Intensity Transformation</string>
+   </property>
+  </action>
+  <action name="actionSpatial_Transformations">
+   <property name="text">
+    <string>Spatial Transformations</string>
+   </property>
+  </action>
+  <action name="actionRGB_to_Grayscale">
+   <property name="text">
+    <string>RGB to Grayscale</string>
+   </property>
+  </action>
+  <action name="actionGrayscale_to_Binary">
+   <property name="text">
+    <string>Grayscale to Binary</string>
+   </property>
+  </action>
+  <action name="actionBasic_Morphological">
+   <property name="text">
+    <string>Basic Morphological</string>
    </property>
   </action>
  </widget>

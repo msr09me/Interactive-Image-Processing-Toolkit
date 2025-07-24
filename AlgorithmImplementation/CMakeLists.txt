@@ -15,9 +15,11 @@ include_directories(include)
 add_library(core STATIC
     src/ImageIO.cpp
     src/ImageIntensityTransformation.cpp
-    # You can add more source files here as you create them:
-    # src/ImageFilter.cpp
-    # src/ImageMorphology.cpp
+    src/ImageSpatialTransformation.cpp
+    src/ImageConverter.cpp
+    src/ImageMorphology.cpp
+    src/ImageUtils.cpp
+
 )
 
 # Test or CLI executable
